@@ -1,38 +1,205 @@
-.App {
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+html, body, #root, .App{height:100%}
+body{line-height:1}
+ol,ul{list-style:none}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  height: 100%;
   text-align: center;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 44px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+nav ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+nav li {
+  width: 150px;
+  display: block;
+  font-family: Arial, sans-serif;
+}
+
+.main, .quiz {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.main:hover, .quiz:hover {
+  background-color: gray;
+}
+
+.main:active {
+  background-color: white;
+}
+
+.greeting {
+  height: 85%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.greeting-text {
+  width: 40%;
+  height: 80%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.greeting-image {
+  width: 400px;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  background: url(images/image.jpg) center no-repeat;
+  background-size: cover;
+  opacity: 0; 
+  animation: ani 3s forwards;
+  animation-delay: 6s;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 35px;
+  font-weight: bolder;
+}
+
+#first-paragraph, #second-paragraph, #third-paragraph, #fourth-paragraph {
+  width: 75%;
+  font-family: Arial, sans-serif;
+  font-size: 37px;
+  font-weight: bolder;
+  opacity: 0; 
+  animation: ani 3s forwards;
+}
+
+#second-paragraph {
+  animation-delay: 3s;
+}
+
+#third-paragraph {
+  animation-delay: 9s;
+}
+
+#fourth-paragraph {
+  animation-delay: 12s;
+}
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.quiz-section {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+}
+
+.show-score-section {
+  height: 333px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 24px;
+  align-items: center;
+}
+
+.final-score {
+  font-family: Arial, sans-serif;
+  font-size: 100px;
+  font-weight: bolder;
+  opacity: 0; 
+  animation: ani 3s forwards;
+}
+
+.question-section {
+  height: 313px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.text-question-section {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.answer-section {
+  width: 100%;
+  height: 188px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#delay {
+  opacity: 0; 
+  animation: ani 3s forwards;
+  animation-delay: 6s;
+}
+
+button {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 250px;
+  font-size: 16px;
+  color: black;
+  background-color: aquamarine;
+  border-radius: 15px;
+  padding: 5px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+button:hover {
   color: white;
+  background-color: black;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:focus {
+  outline: none;
 }
